@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.4.19'
+}
+
+group 'dzunke.pony'
+version '0.0.1'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven { url "https://www.jetbrains.com/intellij-repository/releases" }
+    maven { url "https://www.jetbrains.com/intellij-repository/snapshots" }
+    maven { url "https://jetbrains.bintray.com/intellij-third-party-dependencies" }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+intellij {
+    version '2020.1.1'
+}
+
+patchPluginXml {
+    sinceBuild 201
+    untilBuild null
+
+    changeNotes """
+      0.1: Initial release<br>
+      """
+}
+
+publishPlugin {
+    token intellijPublishToken
+}
+
+publishPlugin {
+    channels intellijPublishChannel
+}

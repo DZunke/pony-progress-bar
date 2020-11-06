@@ -1,0 +1,24 @@
+<idea-plugin require-restart="true">
+    <id>dzunke.pony</id>
+    <name>Pony Progress Bar</name>
+    <vendor email="denis.zunke@gmail.com">Denis Zunke</vendor>
+
+    <description><![CDATA[
+    Pony fans out there can replace their JetBrains PHPStorm Progress Bar by the only thing that matters: A nice Pony.
+    Ponies are working hard for their life so they will be a good support for every developer.<br />
+    <br />
+    This plugin is entirely based on the <a href="https://github.com/dlsniper/gopher">Gopher plugin</a> by
+    Florin Pățan, and inherits <a href="https://plugins.jetbrains.com/plugin/8575-nyan-progress-bar">Nyan Progress Bar plugin</a>
+    from Dmitry Batkovich.<br />
+    <br />
+    Props are also to Roman Pronskiy for releasing the <a href="https://github.com/pronskiy/elephpant-progress-bar">Elephpant progress bar</a> which started the discussion
+    that has led to this pony progress bar plugin.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <idea-version since-build="201"/>
+
+    <applicationListeners>
+        <listener class="dzunke.pony.PonyApplicationComponent" topic="com.intellij.ide.ui.LafManagerListener"/>
+    </applicationListeners>
+</idea-plugin>
